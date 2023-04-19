@@ -1,17 +1,13 @@
-package tech.ada.pagamento.model;
+package tech.ada.user.controller;
 
-import lombok.AllArgsConstructor;
 import lombok.Data;
-import lombok.NoArgsConstructor;
 
 import java.time.LocalDateTime;
+import java.util.List;
 
 @Data
-@NoArgsConstructor
-@AllArgsConstructor
-public class Test {
+public class Comprovante {
 
-    private String name;
     public String id;
     private String pagador;
     private String recebedor;
@@ -19,8 +15,8 @@ public class Test {
     private LocalDateTime data;
     private Boolean ack_usuario;
 
-    public Test(String abc) {
-        this.name = abc;
+    public String[] getParamsUsers() {
+        return new String[] { this.pagador, this.recebedor};
     }
 
 }
